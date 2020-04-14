@@ -1,0 +1,948 @@
+@import "font";
+@import "colors";
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+// My start
+
+h1 {
+  font-size: 1.5em;
+  text-decoration: underline;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.1em;
+  font-weight: 600;
+  text-align: left;
+  padding-left: 1em;
+}
+
+.bg-background {
+  display: none;
+}
+
+.logo {
+  font-size: 1rem;
+  color: $black;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  background-color: $white;
+  z-index: 100;
+}
+
+nav {
+  display: none;
+}
+
+.jumbotron {
+  height: 100vh;
+  padding-top: 55%;
+  box-sizing: border-box;
+
+  .cta {
+    display: none;
+  }
+}
+
+.jumbotron-text {
+  text-align: center;
+
+  .main {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  .role {
+    margin-top: 25%;
+  }
+
+  .name {
+    font-weight: 300;
+  }
+}
+
+.memoji,
+.arrow {
+  display: none;
+}
+
+.fixed-footer {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.cta {
+  display: flex;
+  white-space: nowrap;
+  border: 1px solid $black;
+  align-items: center;
+  width: 100%;
+  padding: 1.25em 1em;
+  cursor: pointer;
+
+  span {
+    display: flex;
+    margin: auto;
+  }
+
+  &.main {
+    background-color: $black;
+    color: $white;
+  }
+
+  &.secondary {
+    background-color: $white;
+  }
+}
+
+#portfolio {
+  content: url("../img/Portfolio.svg");
+  background-size: contain;
+  background-position: ce;
+}
+
+#cv {
+  content: url("../img/Download.png");
+  background-size: contain;
+  background-position: ce;
+}
+
+#bg-light,
+#bg-heavy {
+  position: fixed;
+  width: 100vw;
+  height: 90vh;
+  z-index: -10;
+  overflow: hidden;
+}
+
+#bg-light {
+  top: 0em;
+}
+
+#bg-heavy {
+  bottom: -9.25em;
+}
+
+#bg-light::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: url("../img/bg-light.svg");
+  background-repeat: no-repeat;
+
+  transform: rotate(60deg);
+  top: -5em;
+}
+
+#bg-heavy::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: url("../img/bg-heavy.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transform: rotate(15deg);
+  left: -10em;
+  bottom: -9em;
+}
+
+section {
+  padding-bottom: 7.5em;
+}
+
+.stack {
+  background: $stack_white;
+  padding: 0.5em 1.25em;
+  display: inline-flex;
+  align-items: center;
+  overflow-x: scroll;
+  width: 100%;
+  box-sizing: border-box;
+  // justify-content: center;
+  margin-top: 1.25em;
+  margin-bottom: 5em;
+}
+
+.stack-img {
+  padding: 0.5em 0.75em;
+  height: 2.5em;
+
+  &#jquery {
+    height: 1.2em;
+  }
+}
+
+.work {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "text-1 text-1"
+    "text-2 text-2"
+    "text-3 text-3";
+  width: 100%;
+  box-sizing: border-box;
+
+  h2 {
+    grid-area: title;
+    line-height: 0;
+    margin-top: 1.75em;
+  }
+  p {
+    padding: 0 1em;
+  }
+  p:first-of-type {
+    grid-area: text-1;
+    margin-bottom: 0;
+    margin-top: 1.25em;
+  }
+
+  p:nth-of-type(2) {
+    grid-area: text-2;
+    width: 45%;
+  }
+
+  p:nth-of-type(3) {
+    grid-area: text-3;
+    margin-top: 0;
+  }
+}
+
+.laptop {
+  grid-area: text-2;
+  width: 100%;
+  height: 300px;
+
+  background-size: contain;
+  background-position: 10em 0;
+  background-repeat: no-repeat;
+
+  &#nissan {
+    background-image: url("../img/project/nissan-metric\(mac\).png");
+  }
+  &#chess {
+    background-image: url("../img/project/Chess\(mac\).png");
+  }
+  &#nivanna {
+    background-image: url("../img/project/nivanna\(mac\).png");
+  }
+  &#triplec {
+    background-image: url("../img/project/TripleC\(mac\).png");
+  }
+}
+
+.project:nth-of-type(even) {
+  .work {
+    p:nth-of-type(2) {
+      justify-self: right;
+    }
+  }
+  .laptop {
+    background-position: -10em 0;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .laptop {
+    height: 250px;
+    background-position: 12.5em 0;
+  }
+
+  .project:nth-of-type(even) .laptop {
+    background-position: -6em 0;
+  }
+}
+
+@media only screen and (min-width: 475px) {
+  .laptop {
+    background-position: 14em 0;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .project:nth-of-type(even) .laptop {
+    background-position: -3.5em 0;
+  }
+}
+
+@media only screen and (min-width: 530px) {
+  .laptop {
+    height: 200px;
+    background-position: 16em 0;
+  }
+  .project:nth-of-type(even) .laptop {
+    background-position: 0 0;
+  }
+}
+
+@media only screen and (min-width: 575px) {
+  .laptop {
+    background-position: 19em 0;
+  }
+}
+
+@media only screen and (min-width: 630px) {
+  :root {
+    font-size: 18px;
+  }
+  header {
+    padding: 1em 2.5em;
+  }
+  .burger {
+    display: none;
+  }
+
+  nav {
+    display: unset;
+    width: 60%;
+  }
+
+  ul.menu {
+    list-style: none;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+  }
+
+  .cta {
+    border-radius: 7.5px;
+
+    &.menu {
+      padding: 0.5em;
+      width: fit-content;
+    }
+  }
+  .jumbotron {
+    padding: 2.5em;
+    padding-top: 45%;
+    text-align: center;
+
+    .cta {
+      display: inline-block;
+      width: 8em;
+
+      margin: 20% 1em 0;
+
+      span {
+        width: fit-content;
+      }
+
+      &.secondary {
+        background-color: unset;
+      }
+    }
+  }
+  .jumbotron-text {
+    .role {
+      margin-top: 15%;
+    }
+  }
+
+  .fixed-footer {
+    display: none;
+  }
+
+  #bg-heavy::before {
+    bottom: 0;
+  }
+
+  #bg-light::before {
+    top: 0;
+    right: -5em;
+  }
+}
+
+@media only screen and (min-width: 710px) {
+  :root {
+    font-size: 19px;
+  }
+  .jumbotron {
+    padding-top: 35%;
+
+    .cta {
+      margin: 15% 1em 0;
+    }
+  }
+
+  .jumbotron-text {
+    .role {
+      margin-top: 10%;
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .laptop {
+    background-position: 22em 0;
+  }
+  .project:nth-of-type(even) .laptop {
+    background-position: 3em 0;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  nav {
+    width: 50%;
+  }
+
+  #bg-heavy::before {
+    left: -5em;
+    bottom: -5em;
+  }
+
+  #bg-light::before {
+    top: 5em;
+  }
+
+  .work {
+    grid-template-areas:
+      "title title"
+      "text-1 laptop"
+      "text-2 laptop"
+      "text-3 laptop";
+    grid-template-columns: 1fr 1fr;
+    padding: 2em 2.5em;
+
+    p {
+      width: unset !important;
+      padding: unset;
+
+      &:first-of-type {
+        margin-bottom: unset;
+      }
+
+      &:nth-of-type(3) {
+        margin-bottom: unset;
+      }
+    }
+  }
+
+  .laptop {
+    grid-area: laptop;
+    height: 375px;
+    width: 100%;
+    align-self: center;
+
+    background-position: center;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  .stack {
+    justify-content: space-evenly;
+  }
+
+  .project:nth-of-type(even) {
+    .work {
+      grid-template-areas:
+        "title title"
+        "laptop text-1"
+        "laptop text-2"
+        "laptop text-3";
+    }
+
+    .laptop {
+      background-position: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .jumbotron {
+    padding-top: 30%;
+  }
+
+  .jumbotron-text {
+    .role {
+      margin-top: 5%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  :root {
+    font-size: 20px;
+  }
+
+  .jumbotron {
+    padding-top: 10em;
+  }
+
+  #bg-heavy::before {
+    bottom: -8em;
+  }
+
+  .jumbotron-text {
+    .main {
+      margin-top: 20%;
+    }
+
+    .role {
+      margin-top: 2em;
+    }
+  }
+
+  nav {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .jumbotron {
+    .cta {
+      margin-top: 10%;
+    }
+  }
+  .jumbotron-text {
+    .main {
+      margin-top: 7em;
+    }
+  }
+
+  #bg-light::before {
+    top: 10em;
+    right: -10em;
+  }
+
+  .laptop {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  #bg-light::before {
+    top: 20em;
+    right: -20em;
+  }
+
+  header {
+    padding: 0.5em 4em;
+  }
+
+  nav {
+    width: 32.5%;
+  }
+
+  .work {
+    padding: 2em 4em;
+  }
+
+  h2 {
+    text-align: left;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  :root {
+    font-size: 24px;
+  }
+
+  .bg-background {
+    display: block;
+    height: 100vh;
+    width: 50vw;
+    background-color: $black;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -15;
+  }
+
+  header {
+    background-color: unset;
+  }
+
+  .jumbotron {
+    display: flex;
+    text-align: right;
+    justify-content: space-between;
+    padding-top: 5em;
+
+    .cta {
+      margin: auto auto 9em;
+    }
+  }
+
+  .jumbotron-text {
+    text-align: left;
+    width: 37.5%;
+
+    .main {
+      line-height: 1.5em;
+    }
+
+    .role {
+      margin-top: 2.5em;
+    }
+  }
+
+  .cta {
+    border: 1px solid $white;
+    margin-top: 0;
+    padding: 1em 0;
+
+    span {
+      font-size: 0.8rem;
+    }
+
+    &.main {
+      background-color: $white;
+      color: $black;
+    }
+
+    &.secondary {
+      color: $white;
+    }
+  }
+
+  nav {
+    color: $white;
+    width: 35%;
+  }
+
+  .menu {
+    font-size: 0.8rem;
+  }
+
+  .memoji {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    width: 7em;
+  }
+
+  .arrow {
+    display: block;
+    position: absolute;
+    top: 51%;
+    left: 56%;
+  }
+
+  .jumbotron-btn {
+    display: flex;
+    flex-flow: row-reverse;
+    width: 35vw;
+    float: right;
+  }
+
+  #bg-heavy:before {
+    bottom: -6.5em;
+    left: -3em;
+  }
+
+  .laptop {
+    height: 365px;
+  }
+}
+
+@media only screen and (min-width: 1770px) {
+  :root {
+    font-size: 18px;
+  }
+  .arrow {
+    top: 52%;
+    left: 56%;
+  }
+
+  .memoji {
+    left: 45%;
+    top: 50%;
+  }
+
+  .jumbotron-btn {
+    width: 30vw;
+  }
+
+  #bg-light::before {
+    top: 25em;
+    right: -25em;
+  }
+
+  .work {
+    grid-template-columns: 0.75fr 1fr;
+  }
+
+  .laptop {
+    height: 250px;
+  }
+}
