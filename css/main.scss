@@ -272,7 +272,7 @@ h2 {
   font-size: 1.1em;
   font-weight: 600;
   text-align: left;
-  padding-left: 1em;
+  padding-left: 1.25em;
 }
 
 .bg-background {
@@ -291,10 +291,22 @@ header {
   align-items: center;
   top: 0;
   width: 100%;
-  padding: 1em;
+  padding: 1.25em 2em;
   box-sizing: border-box;
   background-color: $white;
   z-index: 100;
+  justify-content: flex-end;
+  color: $white;
+}
+
+.menu-bg {
+  width: 50%;
+  height: 100%;
+  background-color: $black;
+  z-index: -10;
+  position: absolute;
+  right: 0;
+  display: none;
 }
 
 nav {
@@ -303,8 +315,10 @@ nav {
 
 .jumbotron {
   height: 100vh;
-  padding-top: 55%;
   box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  padding: 2em;
 
   .cta {
     display: none;
@@ -313,6 +327,9 @@ nav {
 
 .jumbotron-text {
   text-align: center;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
 
   .main {
     font-weight: 600;
@@ -419,10 +436,6 @@ nav {
   bottom: -9em;
 }
 
-section {
-  padding-bottom: 7.5em;
-}
-
 .stack {
   background: $stack_white;
   padding: 0.5em 1.25em;
@@ -455,6 +468,7 @@ section {
     "text-3 text-3";
   width: 100%;
   box-sizing: border-box;
+  align-items: center;
 
   h2 {
     grid-area: title;
@@ -462,7 +476,7 @@ section {
     margin-top: 1.75em;
   }
   p {
-    padding: 0 1em;
+    padding: 0 1.25em;
   }
   p:first-of-type {
     grid-area: text-1;
@@ -484,10 +498,11 @@ section {
 .laptop {
   grid-area: text-2;
   width: 100%;
-  height: 300px;
+  height: 250px;
 
   background-size: contain;
-  background-position: 10em 0;
+  background-position: center;
+  background-position-x: 50vw;
   background-repeat: no-repeat;
 
   &#nissan {
@@ -511,92 +526,94 @@ section {
     }
   }
   .laptop {
-    background-position: -10em 0;
+    background-position-x: -38vw;
   }
 }
 
 @media only screen and (min-width: 425px) {
   .laptop {
-    height: 250px;
-    background-position: 12.5em 0;
+    height: 200px;
   }
 
   .project:nth-of-type(even) .laptop {
-    background-position: -6em 0;
+    background-position-x: -15vw;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .project:nth-of-type(even) .laptop {
+    background-position-x: -5vw;
+  }
+
+  .jumbotron-text {
+    .main {
+      font-size: 1.5rem;
+    }
+
+    .role {
+      font-size: 1.2rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.2rem;
   }
 }
 
 @media only screen and (min-width: 475px) {
+  header {
+    padding: 1.5em 2em;
+  }
   .laptop {
-    background-position: 14em 0;
+    height: 160px;
+    background-position-x: 55vw;
+  }
+
+  .project:nth-of-type(even) {
+    .laptop {
+      background-position-x: 0vw;
+    }
+  }
+
+  .work {
+    h2,
+    p {
+      padding: 0 2em;
+    }
   }
 }
 
 @media only screen and (min-width: 500px) {
-  .project:nth-of-type(even) .laptop {
-    background-position: -3.5em 0;
+  .laptop {
+    width: 50vw;
+    background-position: center;
+    justify-self: right;
+  }
+
+  .project:nth-of-type(even) {
+    .laptop {
+      justify-self: left;
+      background-position: center;
+    }
   }
 }
 
 @media only screen and (min-width: 530px) {
   .laptop {
     height: 200px;
-    background-position: 16em 0;
-  }
-  .project:nth-of-type(even) .laptop {
-    background-position: 0 0;
-  }
-}
-
-@media only screen and (min-width: 575px) {
-  .laptop {
-    background-position: 19em 0;
+    margin: 0;
   }
 }
 
 @media only screen and (min-width: 630px) {
-  :root {
-    font-size: 18px;
-  }
   header {
     padding: 1em 2.5em;
   }
-  .burger {
-    display: none;
-  }
 
-  nav {
-    display: unset;
-    width: 60%;
-  }
-
-  ul.menu {
-    list-style: none;
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    padding: 0;
-    align-items: center;
-  }
-
-  .cta {
-    border-radius: 7.5px;
-
-    &.menu {
-      padding: 0.5em;
-      width: fit-content;
-    }
-  }
   .jumbotron {
-    padding: 2.5em;
-    padding-top: 45%;
-    text-align: center;
-
     .cta {
       display: inline-block;
       width: 8em;
-
-      margin: 20% 1em 0;
 
       span {
         width: fit-content;
@@ -608,9 +625,20 @@ section {
     }
   }
   .jumbotron-text {
+    margin: auto auto 10em;
     .role {
-      margin-top: 15%;
+      margin-top: 1.5em;
     }
+  }
+
+  .jumbotron-btn {
+    display: flex;
+    margin: 0 2em 10em;
+    justify-content: space-evenly;
+  }
+
+  .stack {
+    justify-content: center;
   }
 
   .fixed-footer {
@@ -625,39 +653,83 @@ section {
     top: 0;
     right: -5em;
   }
+
+  .laptop {
+    height: 215px;
+  }
 }
 
 @media only screen and (min-width: 710px) {
-  :root {
-    font-size: 19px;
+  .burger {
+    display: none;
+  }
+  header {
+    background-color: unset;
+    color: $black;
+    font-size: 1em;
+  }
+
+  nav {
+    display: unset;
+    width: 45%;
+  }
+
+  ul.menu {
+    list-style: none;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+  }
+
+  .cta {
+    border-radius: 7.5px;
+    border-color: $black;
+
+    &.menu {
+      padding: 0.5em;
+      width: fit-content;
+    }
   }
   .jumbotron {
-    padding-top: 35%;
-
     .cta {
-      margin: 15% 1em 0;
+      margin: 2em 0;
     }
   }
 
   .jumbotron-text {
-    .role {
-      margin-top: 10%;
+    margin: auto auto 3em;
+    .main {
+      font-size: 1.5em;
     }
   }
-}
 
-@media only screen and (min-width: 750px) {
-  .laptop {
-    background-position: 22em 0;
+  .work {
+    h2 {
+      line-height: unset;
+    }
   }
-  .project:nth-of-type(even) .laptop {
-    background-position: 3em 0;
+
+  h1 {
+    margin-bottom: unset;
   }
 }
 
 @media only screen and (min-width: 850px) {
+  .jumbotron {
+    padding: 5.5em 10em;
+
+    .cta {
+      margin: 3em 0;
+    }
+  }
+  .jumbotron-btn {
+    margin: 0 2em 7.5em;
+  }
+
   nav {
-    width: 50%;
+    width: 20em;
   }
 
   #bg-heavy::before {
@@ -694,7 +766,7 @@ section {
 
   .laptop {
     grid-area: laptop;
-    height: 375px;
+    height: 325px;
     width: 100%;
     align-self: center;
 
@@ -704,9 +776,6 @@ section {
   h2 {
     text-align: center;
     margin-bottom: 2em;
-  }
-  .stack {
-    justify-content: space-evenly;
   }
 
   .project:nth-of-type(even) {
@@ -722,23 +791,26 @@ section {
       background-position: center;
     }
   }
+
+  .stack-img {
+    margin: 0 1em;
+  }
 }
 
 @media only screen and (min-width: 950px) {
-  .jumbotron {
-    padding-top: 30%;
-  }
-
   .jumbotron-text {
     .role {
       margin-top: 5%;
     }
   }
+  header {
+    padding: 1.5em 2.5em;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   :root {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .jumbotron {
@@ -762,12 +834,20 @@ section {
   nav {
     width: 45%;
   }
+
+  .work {
+    padding: 2.5em;
+  }
+
+  .laptop {
+    height: 300px;
+  }
 }
 
 @media only screen and (min-width: 1100px) {
   .jumbotron {
     .cta {
-      margin-top: 10%;
+      margin: 2em 0;
     }
   }
   .jumbotron-text {
@@ -782,7 +862,11 @@ section {
   }
 
   .laptop {
-    height: 300px;
+    height: 275px;
+  }
+
+  .work {
+    padding: 5em;
   }
 }
 
@@ -793,7 +877,7 @@ section {
   }
 
   header {
-    padding: 0.5em 4em;
+    padding: 2em 4em;
   }
 
   nav {
@@ -801,7 +885,12 @@ section {
   }
 
   .work {
-    padding: 2em 4em;
+    padding: 2em 7.5em 4em;
+
+    h2,
+    p {
+      padding: unset;
+    }
   }
 
   h2 {
@@ -832,26 +921,30 @@ section {
   }
 
   .jumbotron {
-    display: flex;
-    text-align: right;
-    justify-content: space-between;
-    padding-top: 5em;
+    flex-flow: row;
+    padding: 4.75em;
 
     .cta {
-      margin: auto auto 9em;
+      margin: 10em 0 auto;
     }
   }
 
   .jumbotron-text {
     text-align: left;
-    width: 37.5%;
+    width: 45%;
+    margin: auto 0;
 
     .main {
       line-height: 1.5em;
+      margin-top: 2em;
     }
 
     .role {
-      margin-top: 2.5em;
+      margin-top: 1em;
+    }
+
+    .name {
+      margin: 0;
     }
   }
 
@@ -886,23 +979,25 @@ section {
   .memoji {
     display: block;
     position: absolute;
-    top: 50%;
-    left: 43%;
-    width: 7em;
+    top: 52.5%;
+    left: 45%;
+    width: 6.5em;
   }
 
   .arrow {
     display: block;
     position: absolute;
-    top: 51%;
-    left: 56%;
+    top: 55%;
+    left: 55%;
+    width: 5em;
   }
 
   .jumbotron-btn {
     display: flex;
     flex-flow: row-reverse;
-    width: 35vw;
+    width: 32.5vw;
     float: right;
+    margin: auto 0 auto auto;
   }
 
   #bg-heavy:before {
@@ -910,23 +1005,25 @@ section {
     left: -3em;
   }
 
-  .laptop {
-    height: 365px;
+  // .laptop {
+  //   height: 365px;
+  // }
+
+  .work {
+    p {
+      font-size: 0.8rem;
+    }
   }
 }
 
 @media only screen and (min-width: 1770px) {
-  :root {
-    font-size: 18px;
-  }
   .arrow {
-    top: 52%;
-    left: 56%;
+    width: 6em;
   }
 
   .memoji {
-    left: 45%;
-    top: 50%;
+    width: 7em;
+    left: 46%;
   }
 
   .jumbotron-btn {
@@ -940,9 +1037,19 @@ section {
 
   .work {
     grid-template-columns: 0.75fr 1fr;
+    padding: 2em 10em 4em;
   }
 
   .laptop {
-    height: 250px;
+    height: 300px;
+    width: 65%;
+  }
+
+  .stack {
+    padding: 1em 2em;
+  }
+
+  .stack-img {
+    scale: 1.1.5;
   }
 }
