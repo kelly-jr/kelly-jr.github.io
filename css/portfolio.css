@@ -389,6 +389,7 @@ h2 {
 }
 
 .role-content > p:last-child {
+  grid-column: 2 / -1;
   color: #b6c2bd;
 }
 
