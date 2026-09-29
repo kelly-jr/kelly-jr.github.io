@@ -1,211 +1,318 @@
 <!doctype html>
-<html class="no-js" lang="">
-
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="Kelly Mulumbi Portfolio">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
-
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-
-    <meta name="theme-color" content="#fafafa">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Kelly Mulumbi is a Software Engineer II building secure, scalable platforms, data systems, and offline-first products."
+    />
+    <meta name="theme-color" content="#081512" />
+    <meta property="og:title" content="Kelly Mulumbi — Software Engineer II" />
+    <meta
+      property="og:description"
+      content="Secure platforms, data systems, and resilient products built for real-world scale."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kelly-jr.github.io/" />
+    <title>Kelly Mulumbi — Software Engineer II</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="stylesheet" href="/css/portfolio.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kelly Mulumbi",
+        "jobTitle": "Software Engineer II",
+        "url": "https://kelly-jr.github.io/",
+        "sameAs": [
+          "https://github.com/kelly-jr",
+          "https://www.linkedin.com/in/kelly-mulumbi-0308b1133/"
+        ],
+        "knowsAbout": [
+          "Distributed systems",
+          "Identity and access management",
+          "Data pipelines",
+          ".NET",
+          "TypeScript",
+          "Kotlin"
+        ]
+      }
+    </script>
   </head>
-
   <body>
-    <!--[if IE]>
-  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
-    your browser</a> to improve your experience and security.</p>
-  <![endif]-->
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Add your site or application content here -->
-    <header>
-      <nav>
-        <ul class="menu">
-          <li>Contact</li>
-          <li>Portfolio</li>
-          <li class="cta menu">Download CV</li>
-        </ul>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Kelly Mulumbi, home">KM<span>.</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="#impact">Impact</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
+        <a class="nav-contact" href="mailto:kellymulumbi@gmail.com">Get in touch</a>
       </nav>
-
-      <svg class="burger" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect y="8" width="20" height="2" fill="black" />
-        <rect width="20" height="2" fill="black" />
-        <rect y="15" width="20" height="2" fill="black" />
-      </svg>
-
-      <div class="menu-bg"></div>
     </header>
 
-    <div class="jumbotron">
-      <div class="jumbotron-text">
-        <p class="main">I design and develop beatiful and functional web applications</p>
-
-        <p class="role">UI Designer and Developer</p>
-        <p class="name">Kelly Mulumbi</p>
-      </div>
-      <div class="jumbotron-btn">
-        <div class="cta secondary">
-          <span>View portfolio</span>
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Software Engineer II · Nairobi, Kenya</p>
+          <h1>I build systems that stay <em>secure</em>, fast, and useful at scale.</h1>
+          <p class="hero-intro">
+            I’m Kelly Mulumbi, a systems-oriented engineer with 4+ years of experience
+            across identity platforms, global data products, and offline-first mobile
+            systems.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#impact">Explore my work</a>
+            <a
+              class="button button-secondary"
+              href="https://github.com/kelly-jr"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub <span aria-hidden="true">↗</span></a
+            >
+          </div>
         </div>
-        <div class="cta main">
-          <span>Download CV</span>
+        <aside class="hero-panel" aria-label="At a glance">
+          <p class="panel-label">At a glance</p>
+          <dl>
+            <div>
+              <dt>24K+</dt>
+              <dd>enterprise applications covered by security analytics</dd>
+            </div>
+            <div>
+              <dt>80%</dt>
+              <dd>reduction in remediation effort</dd>
+            </div>
+            <div>
+              <dt>1,200+</dt>
+              <dd>farmers supported by the Kilimo platform</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="section" id="impact">
+        <div class="section-heading">
+          <p class="section-index">01 / Impact</p>
+          <h2>Engineering outcomes, not just output.</h2>
+          <p>
+            I work across platform, data, and product boundaries to turn complex
+            operational problems into reliable systems.
+          </p>
         </div>
-      </div>
-    </div>
-
-    <section class="portfolio">
-      <h1>Portfolio</h1>
-
-      <!-- Nissan Performance Dashboard -->
-      <div class="project">
-        <div class="work">
-          <h2>Nissan Performance Dashboard</h2>
-          <p>The Nissan Performance dashboard project required creation of a user interface to compute and showcase
-            different performance metrics. </p>
-          <p>My role in this project was to implement the UI. The page layout was developed using<strong>HTML,
-              CSS</strong> and afew JS libraries for the different features (<strong>JQuery, ChartJS and
-              Datatables</strong> ). The backend was developed in Python (Flask).</p>
-          <p>To test the front end,<strong>JEST-Puppeteer</strong>, a library combining the features of both JEST and
-            Puppeteer.</p>
-
-          <div class="laptop" id="nissan"></div>
+        <div class="impact-grid">
+          <article class="impact-card accent-mint">
+            <p class="card-kicker">Security at scale</p>
+            <h3>Safer identity infrastructure across 24,000+ applications</h3>
+            <p>
+              Built analytics and remediation capabilities that identify unsafe
+              credential usage across global and sovereign cloud environments.
+            </p>
+            <ul>
+              <li>Identity &amp; access management</li>
+              <li>Security posture scoring</li>
+              <li>Automated remediation</li>
+            </ul>
+          </article>
+          <article class="impact-card accent-gold">
+            <p class="card-kicker">Operational efficiency</p>
+            <h3>Six days of remediation work reduced to one</h3>
+            <p>
+              Redesigned high-volume execution workflows with batch processing,
+              optimized Git tooling, and safe rollback automation.
+            </p>
+            <ul>
+              <li>~80% effort reduction</li>
+              <li>15 min → ~2 min bulk updates</li>
+              <li>3 min → &lt;10 sec app signing</li>
+            </ul>
+          </article>
+          <article class="impact-card accent-blue">
+            <p class="card-kicker">Product in the field</p>
+            <h3>Offline-first operations for agricultural cooperatives</h3>
+            <p>
+              Built a POS-integrated Android platform for produce collection and
+              payment workflows in low-connectivity environments.
+            </p>
+            <ul>
+              <li>20+ coffee factories</li>
+              <li>Bluetooth scale integration</li>
+              <li>Receipt &amp; SMS traceability</li>
+            </ul>
+          </article>
         </div>
-        <div class="stack">
-          <img src="img/stack/Python.png" alt="Python L ogo" class="stack-img" id="python">
-          <img src="img/stack/flask 2.png" alt="Flask Logo" class="stack-img" id="flask">
-          <img src="img/stack/JS.png" alt="JS Logo" class="stack-img" id="js">
-          <img src="img/stack//jquery.png" alt="JQuery Logo" class="stack-img" id="jquery">
-          <img src="img/stack/ChartJS.png" alt="ChartJS Logo" class="stack-img" id="chartJS">
-          <img src="img/stack/puppeteer logo.png" alt="Puppeteer Logo" class="stack-img" id="puppeteer">
-          <img src="img/stack/Jest.png" alt="Jest Logo" class="stack-img" id="jest">
-          <img src="img/stack/HTML.png" alt="HTML Logo" class="stack-img" id="html">
-          <img src="img/stack/Css.png" alt="CSS Logo" class="stack-img" id="css">
+      </section>
+
+      <section class="section experience-section" id="experience">
+        <div class="section-heading">
+          <p class="section-index">02 / Experience</p>
+          <h2>From global platforms to local infrastructure.</h2>
         </div>
-      </div>
-
-      <!-- Jenga Chess League -->
-      <div class="project">
-        <div class="work">
-          <h2>Jenga Chess League</h2>
-          <p>The Jenga Chess League is an application used by Jenga Tech Solutions to manage and display the leaderboard
-            for their local chess tournament.</p>
-          <p>In this project, I designed and developed the UI. The technology used here was<strong>ReactJS</strong> </p>
-
-          <div class="laptop" id="chess"></div>
+        <div class="timeline">
+          <article class="role">
+            <div class="role-meta">
+              <p>2022 — Present</p>
+              <span>Microsoft</span>
+            </div>
+            <div class="role-content">
+              <p class="role-number">01</p>
+              <h3>Software Engineer II</h3>
+              <p class="role-subtitle">Identity &amp; App Platform</p>
+              <p>
+                Building backend services, security analytics, data pipelines, and
+                automation for enterprise application identity. Contributed to
+                FedRAMP-enabling platform capabilities, Microsoft Graph APIs, and
+                security enforcement across global cloud environments.
+              </p>
+            </div>
+          </article>
+          <article class="role">
+            <div class="role-meta">
+              <p>2019 — 2021</p>
+              <span>Artefact · UK, Remote</span>
+            </div>
+            <div class="role-content">
+              <p class="role-number">02</p>
+              <h3>Frontend Engineer</h3>
+              <p class="role-subtitle">Nissan Global Marketing Platform</p>
+              <p>
+                Helped modernize a global analytics platform from a server-rendered
+                monolith to a Python and React architecture. Improved perceived page
+                load from ~2.3 seconds to sub-second performance for data-heavy views.
+              </p>
+            </div>
+          </article>
+          <article class="role">
+            <div class="role-meta">
+              <p>2019 — 2021</p>
+              <span>Jenga Tech Solutions</span>
+            </div>
+            <div class="role-content">
+              <p class="role-number">03</p>
+              <h3>Software Engineer</h3>
+              <p class="role-subtitle">Business systems &amp; web platforms</p>
+              <p>
+                Delivered payroll, accounting, logistics, and CMS products using
+                Python, Odoo, and Django for Kenyan and pan-African clients.
+              </p>
+            </div>
+          </article>
         </div>
-        <div class="stack">
-          <img src="img/stack/JS.png" alt="JS Logo" class="stack-img" id="js">
-          <img src="img/stack/React.png " alt="React Logo" class="stack-img" id="react">
-          <img src="img/stack//jquery.png" alt="JQuery Logo" class="stack-img" id="jquery">
-          <img src="img/stack/Css.png" alt="CSS Logo" class="stack-img" id="css">
+      </section>
+
+      <section class="section" id="work">
+        <div class="section-heading">
+          <p class="section-index">03 / Selected work</p>
+          <h2>Systems shaped by their operating environment.</h2>
         </div>
-      </div>
-
-      <!-- Nivanna Interiors -->
-      <div class="project">
-        <div class="work">
-          <h2>Nivanna Interiors</h2>
-          <p>The Nivanna Interiors project was a informational site for a local retail company, Nivanna Interiors Ltd,
-            that specializes in the sale of household interior design items like curtains, artwork and the likes.</p>
-          <p>The client in this case had an existing website developed in wordpress. The requirement was to use the same
-            platform to create a new website.</p>
-          <p>In this project, I designed and developed the UI in HTML, after which I converted the <strong>HTML</strong>
-            template to a <strong>Wordpress</strong> template.</p>
-
-          <div class="laptop" id="nivanna"></div>
+        <div class="work-grid">
+          <article class="work-card work-featured">
+            <div class="work-topline">
+              <p>Android · Kotlin · Offline-first</p>
+              <span>Field operations</span>
+            </div>
+            <div>
+              <h3>Kilimo</h3>
+              <p>
+                An agricultural operations platform connecting produce intake,
+                Bluetooth weighing, credit, payslips, and farmer payments—even when
+                connectivity is unreliable.
+              </p>
+            </div>
+            <div class="work-stat">
+              <strong>1,200+</strong>
+              <span>farmers supported</span>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-topline">
+              <p>Kotlin · Compose · Maps</p>
+              <span>Mobile</span>
+            </div>
+            <div>
+              <h3>Kilimo Survey</h3>
+              <p>
+                Offline farm-boundary capture with GPS geometry, local persistence,
+                map visualization, and queued synchronization for field agents.
+              </p>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-topline">
+              <p>TypeScript · PostGIS · React Native</p>
+              <span>Product</span>
+            </div>
+            <div>
+              <h3>Vibe</h3>
+              <p>
+                A location-based event discovery platform with real-time updates,
+                geospatial search, and shared types across the mobile and API stack.
+              </p>
+            </div>
+          </article>
         </div>
-        <div class="stack">
-          <img src="img/stack/PHP.png" alt="PHP Logo" class="stack-img" id="php">
-          <img src="img/stack/Wordpress.png" alt="Wordpress Logo" class="stack-img" id="wordpress">
-          <img src="img/stack/JS.png" alt="JS Logo" class="stack-img" id="js">
-          <img src="img/stack//jquery.png" alt="JQuery Logo" class="stack-img" id="jquery">
-          <img src="img/stack/HTML.png" alt="HTML Logo" class="stack-img" id="html">
-          <img src="img/stack/Css.png" alt="CSS Logo" class="stack-img" id="css">
-          <img src="img/stack/Bootstrap.png" alt="Bootstrap Logo" class="stack-img" id="bootstrap">
+        <a class="text-link" href="https://github.com/kelly-jr" target="_blank" rel="noreferrer">
+          Browse my public GitHub work <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+
+      <section class="section capabilities-section">
+        <div class="section-heading">
+          <p class="section-index">04 / Capabilities</p>
+          <h2>Broad enough to connect the system. Deep enough to improve it.</h2>
         </div>
-      </div>
-
-      <!-- Triple c -->
-      <div class="project">
-        <div class="work">
-          <h2>Triple C</h2>
-          <p>Triple C (formerly Capital C Consulting) is gender based Non profit organisation, that seeks sto emplower
-            women run businesses.</p>
-          <p>In this project, the requirement was to create a website and provide a Content Management System (CMS) for
-            an admin user to update the content of the website.</p>
-          <p>I developed the UI using <strong>HTML/CSS</strong> while the backend (CMS) was created using a
-            <strong>Python, Django based CMS (Mezzanine)</strong>. The application was then deployed on
-            <strong>aws</strong>.</p>
-
-          <div class="laptop" id="triplec"></div>
+        <div class="capability-list">
+          <article>
+            <span>01</span>
+            <h3>Backend &amp; systems</h3>
+            <p>C# · .NET · REST APIs · distributed systems · system design</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Data &amp; cloud</h3>
+            <p>Azure Synapse · Kusto · SQL · Power BI · telemetry pipelines</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Frontend &amp; mobile</h3>
+            <p>TypeScript · React · Angular · Kotlin · Android · offline-first</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Security &amp; platform</h3>
+            <p>IAM · credential security · automation · compliance engineering</p>
+          </article>
         </div>
-        <div class="stack">
-          <img src="img/stack/Python.png" alt="Python L ogo" class="stack-img" id="python">
-          <img src="img/stack//django.png" alt="Django Log" class="stack-img" id="django">
-          <img src="img/stack/JS.png" alt="JS Logo" class="stack-img" id="js">
-          <img src="img/stack//jquery.png" alt="JQuery Logo" class="stack-img" id="jquery">
-          <img src="img/stack/HTML.png" alt="HTML Logo" class="stack-img" id="html">
-          <img src="img/stack/Css.png" alt="CSS Logo" class="stack-img" id="css">
-          <img src="img/stack/Bootstrap.png" alt="Bootstrap Logo" class="stack-img" id="bootstrap">
+      </section>
+
+      <section class="contact-section">
+        <p class="section-index">05 / Contact</p>
+        <h2>Let’s build something that matters.</h2>
+        <p>
+          I’m interested in ambitious engineering problems across platforms, data,
+          security, and products built for real-world constraints.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:kellymulumbi@gmail.com">kellymulumbi@gmail.com</a>
+          <a
+            href="https://www.linkedin.com/in/kelly-mulumbi-0308b1133/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn ↗</a
+          >
+          <a href="https://github.com/kelly-jr" target="_blank" rel="noreferrer"
+            >GitHub ↗</a
+          >
         </div>
-      </div>
+      </section>
+    </main>
 
-
-    </section>
-
-    <!--  Portfolio img-->
-    <img class="memoji" src="img/memoji-cropped.png" />
-
-    <!--  Arrow img-->
-    <img class="arrow" src="img/Arrow.svg" />
-    </section>
-
-    <div class="fixed-footer">
-      <div class="cta secondary">
-        <span id="portfolio"></span> <span>View portfolio</span>
-      </div>
-      <div class="cta main">
-        <span id="cv"></span> <span>Download CV</span>
-      </div>
-    </div>
-
-    <!--  background heavy-->
-    <div id="bg-heavy" class="bg">
-    </div>
-
-    <!--  background light-->
-    <div id="bg-light" class="bg">
-    </div>
-
-    <!-- Black background -->
-    <div class="bg-background"></div>
-
-
-    <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>');</script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
-      window.ga = function () {
-        ga.q.push(arguments);
-      };
-      ga.q = [];
-      ga.l = +new Date;
-      ga('create', 'UA-163602113-1', 'auto');
-      ga('set', 'transport', 'beacon');
-      ga('send', 'pageview');
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <footer>
+      <p>© <span id="year">2026</span> Kelly Mulumbi</p>
+      <p>Designed for clarity. Built for speed.</p>
+    </footer>
+    <script src="/js/portfolio.js"></script>
   </body>
-
 </html>
