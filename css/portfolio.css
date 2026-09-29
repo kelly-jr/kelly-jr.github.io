@@ -422,6 +422,10 @@ h2 {
     radial-gradient(circle at 90% 10%, var(--mint), transparent 33%);
 }
 
+.work-wide {
+  grid-column: 1 / -1;
+}
+
 .work-topline {
   display: flex;
   justify-content: space-between;
@@ -647,6 +651,10 @@ footer p {
   }
 
   .work-featured {
+    grid-column: 1;
+  }
+
+  .work-wide {
     grid-column: 1;
   }
 
